@@ -162,6 +162,7 @@
     </Compile>
     <Compile Include="Models\Cream.cs" />
     <Compile Include="Models\CreamContext.cs" />
+    <Compile Include="Models\CreamDbInitializer.cs" />
     <Compile Include="Models\Purshase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
