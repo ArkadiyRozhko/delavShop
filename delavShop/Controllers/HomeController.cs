@@ -36,5 +36,19 @@ namespace delavShop.Controllers
             ViewBag.Creams = creams;
             return View();
         }
+        [HttpGet]
+        public ActionResult Buy(int Id)
+        {
+            ViewBag.CreamId = Id;
+            return View();
+        }
+        [HttpPost]
+        public string Buy(Purshase purshase)
+        {
+            purshase.Date=DateTime.Now;
+            db.Purshases.Add(purshase);
+            db.SaveChanges();
+            return "Дякуємо, " + purshase.Person + " за покупку!";
+        }
     }
 }
