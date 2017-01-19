@@ -7,7 +7,7 @@
 
 
 
-<div>
+@*<div>
     <h3>Форма оформлення покупки</h3>
     <form method="post" action="">
         <input type="hidden" value="@ViewBag.CreamId" name="CreamId"/>
@@ -19,5 +19,15 @@
             <tr><td><input type="submit" value="Відправити"/></td></tr>
         </table>
     </form>
-</div>
+</div>*@
+
+@using (Html.BeginForm("Buy", "Home", FormMethod.Post))
+{
+    <input type="hidden" value="@ViewBag.CreamId" name="CreamId"/>
+    <p>Введіть своє імя</p>
+    @Html.TextBox("Person","Введіть імя")
+    <p>Введіть свою адресу</p>
+    @Html.TextBox("Address", "Введіть адресу")
+    <p><input type="submit" value="Відправити"/></p>
+}
 
