@@ -50,5 +50,11 @@ namespace delavShop.Controllers
             db.SaveChanges();
             return "Дякуємо, " + purshase.Person + " за покупку!";
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            db.Dispose();
+            base.Dispose(disposing);
+        }
     }
 }

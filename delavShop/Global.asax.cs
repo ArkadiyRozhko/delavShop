@@ -14,7 +14,7 @@ namespace delavShop
     {
         protected void Application_Start()
         {
-            Database.SetInitializer(new CreamDbInitializer());
+           // Database.SetInitializer(new CreamDbInitializer());
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
